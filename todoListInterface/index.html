@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+    .content{
+        width: 100%;
+    }
+
+    .content h1{
+        margin-top: 170px;
+        text-align: center;
+    }
+
+    .content p{
+        text-align: center;
+        font-size: large;
+    }
+
+    .content .content-button{
+        text-align: center;
+    }
+
+    </style>
+    
+    <title>ToList Apps</title>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">ToList</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" id="myActivity" href="#" data-toggle="modal" data-target="#modalData">I'am going to</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Info
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Version 0.01 BETA</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Created By.Rendy</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <!-- <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#modalAdd">Add Action+</button> -->
+            </form>
+        </div>
+    </nav>
+
+    <!-- content -->
+    <div class="container content">
+        <div class="row">
+            <div class="col-12">
+                <h1>What are you doing today ?</h1>
+                <p>You can managed your activity in this website.</p>
+                <div class="content-button">
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalAdd">Add Action+</button>
+                        &nbsp;&nbsp;
+                        <button type="button" class="btn btn-warning" id="countActivity" data-toggle="modal" data-target="#modalData">My Activity (0)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="modalData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">List Activity</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Modal add -->
+    <div class="modal fade" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add Activity</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <form>
+                    <div class="form-group">
+                      <label for="title">Title</label>
+                      <input type="text" name="title" class="form-control" id="title" placeholder="title" required>
+                      <small id="titleHelp" class="form-text text-muted">Write your activity in future</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="description">Description</label>
+                      <input type="text" name="description" class="form-control" id="description" placeholder="description" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary" id="submit" data-dismiss="modal">Save</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <!-- <nav class="navbar fixed-bottom navbar-light bg-light">
+        <p>Version</p>
+    </nav> -->
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            getData()
+            
+            $('#modalBody').on('click','#deleteData',function(){
+                        var index = $(this).data('index')
+                        console.log(index)
+                        if(index == 0){
+                            alert('It\'s for example canot be deleted')
+                        }else{
+                        deleteData(index)
+                        }
+            });
+
+            $('#modalBody').on('click','#finishedData',function(){
+                        var index = $(this).data('index')
+                        console.log(index)
+                        finishedData(index)
+            });
+
+            document.getElementById('submit').addEventListener('click',function(e){
+                if ($('#title').val() == "") {
+                    alert('You must insert title')
+                }else if($('#description').val() == ""){
+                    alert('You must insert description')
+                }else{
+                    postData($('#title').val(),$('#description').val())
+                }
+            })
+
+            function getData(){
+            $.ajax({
+                url: 'http://localhost:8001/api/todos',
+                contentType: 'application/json',
+                success: function(response) {
+                  var html = '';
+                  var i;
+                  if(response.length === 0){
+                      html = "<p>you have not activity</p>"
+                      document.getElementById('modalBody').innerHTML = html
+                      document.getElementById('countActivity').textContent = `My Activity (${response.length})`
+                  }else{
+                    var number = 1;
+                  for(i=0; i<response.length; i++){
+                    
+                    if(response[i].status == "finished"){
+                        html += '<h4>'+ number + '. ' + response[i].title + '</h4>' +
+                            '<p>Desc : '+ response[i].description + '</p>' +
+                            '<p style="margin-top:-15px;margin-bottom:20px;" >status : '+ response[i].status + '</p>' +
+                            '<p class="btn btn-success btn-sm disabled" id="finishedData" data-index="' + i + '" style="margin-bottom:20px;margin-top:-10px;">Finished</p>  ' +
+                            '<p class="btn btn-danger btn-sm" id="deleteData" data-index="' + i + '" style="margin-bottom:20px;margin-top:-10px;">Delete</p>'
+
+                    }else{
+                    html += '<h4>'+ number + '. ' + response[i].title + '</h4>' +
+                            '<p>Desc : '+ response[i].description + '</p>' +
+                            '<p style="margin-top:-15px;margin-bottom:20px;" >status : '+ response[i].status + '</p>' +
+                            '<p class="btn btn-success btn-sm" id="finishedData" data-index="' + i + '" style="margin-bottom:20px;margin-top:-10px;">Finished</p>  ' +
+                            '<p class="btn btn-danger btn-sm" id="deleteData" data-index="' + i + '" style="margin-bottom:20px;margin-top:-10px;">Delete</p>'
+                    }
+                    number++
+                  }
+                  document.getElementById('modalBody').innerHTML = html
+                  document.getElementById('countActivity').textContent = `My Activity (${response.length})`
+                  }
+                  console.log(response)
+                }
+            })
+            }
+      
+            function postData(title,description){
+                const data = {
+                    title: title,
+                    description: description
+                }
+                $.ajax({
+                    method: 'POST',
+                    url: 'http://localhost:8001/api/todos',
+                    contentType: 'application/json',
+                    data: JSON.stringify(data),
+                    success: function(response){
+                        $('[name="title"]').val("");
+                        $('[name="description"]').val("");
+                        getData()
+                    }
+                })
+            }
+            
+            function finishedData(index){
+                const data = {
+                    index:index
+                }
+                $.ajax({
+                    method: 'PUT',
+                    url: 'http://localhost:8001/api/todos/finished',
+                    contentType: 'application/json',
+                    data: JSON.stringify(data),
+                    success: function(response){
+                        console.log(response)
+                        getData()
+                    } 
+                })
+            }
+
+            function deleteData(index){
+                const data = {
+                    index: index    
+                }
+                $.ajax({
+                    method: 'DELETE',
+                    url: 'http://localhost:8001/api/todos',
+                    contentType: 'application/json',
+                    data: JSON.stringify(data),
+                    success: function(response){
+                        console.log(response)
+                        getData()
+                    }
+                })
+                
+            }
+        });
+    </script>
+  </body>
+</html>

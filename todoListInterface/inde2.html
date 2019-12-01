@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  function getData(){
+  $.ajax({
+      url: 'http://localhost:8001/api/todos',
+      contentType: 'application/json',
+      success: function(response) {
+          console.log(response)
+      }
+  })
+  }
+
+  function postData(){
+      const data = {
+          title: "ini title",
+          description: "ini description title"
+      }
+      $.ajax({
+          method: 'POST',
+          url: 'http://localhost:8001/api/todos',
+          contentType: 'application/json',
+          data: JSON.stringify(data),
+          success: function(response){
+              console.log(response)
+          }
+      })
+  }
+  
+  postData()
+});
+</script>
+</head>
+<body>
+
+<button>Send an HTTP GET request to a page and get the result back</button>
+
+</body>
+</html>
